@@ -2,28 +2,31 @@
   <div class="flex min-h-screen min-w-fulll bg-hardbg overflow-auto">
     <NavBar />
 
-    <div class="container flex-wrap flex">
-      <div class="mx-8 md:mx-0 mt-2">
-        <img class="md:ml-40 md:mt-20" src="../../public/me.jpg" />
+    <div class="container k:ml-64 2xl:ml-40 3xl:ml-64 flex-wrap flex">
+      <div class="mx-8 md:mx-0 k:ml-64 4xl:ml-40 mt-2 sm:ml-64">
+        <img class="md:ml-40 md:mt-20 k:ml-64 5xl:ml-40 kk:ml-64" src="../../public/me.jpg" />
       </div>
-      <div class="md:ml-24 md:mt-24 -mt-24 text-center max-w-xl md:text-left">
+      <div class="md:ml-24 md:mt-24 -mt-18 text-center max-w-xl md:text-left">
         <div class="md:text-4xl text-3xl text-white font-bold">Oğuzhan Akıncı 🔥</div>
-        <p class="md:mt-8 md:text-3xl">
-          Fireship.io is an ecosystem of practical resources for developers who
-          want to build high-quality web & mobile apps.
+        <p class="md:mt-8 md:text-3xl text-contentcolor">
+          Hi, I'm
+          <a class="text-white">Oğuzhan Akıncı</a> and I created this project to
+          help people build and ship high-quality apps. My mission is simple 👉
+          produce practical content that increases developer happiness and
+          productivity 🚀.
         </p>
-        <div class="mt-8">
+        <div class="mt-10">
           <button
-            class="border-2 border-tomato mr-2 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white"
+            class="border-2 border-tomato mr-4 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
           >Github</button>
           <button
-            class="border-2 border-tomato mr-2 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white"
+            class="border-2 border-tomato mr-4 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
           >Twitter</button>
           <button
-            class="border-2 border-tomato mr-2 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white"
+            class="border-2 border-tomato mr-4 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
           >Instagram</button>
           <button
-            class="border-2 border-tomato mr-2 text-lg h-10 w-32 hover:bg-tomato hover:text-white"
+            class="border-2 border-tomato mr-4 text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
           >Facebook</button>
         </div>
       </div>
