@@ -3,3 +3,8 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+*::selection {
+  background-color: #0c9447;
+  color: #fff;
+}
