@@ -1,5 +1,7 @@
 <template>
-  <div class="hidden md:block shadow-xl fixed h-full w-16 block bg-softbg float-left z-10">
+  <div
+    class="hidden md:block shadow-xl fixed h-full w-16 block bg-softbg float-left z-10"
+  >
     <ul>
       <li>
         <homebutton />
@@ -20,6 +22,7 @@
             icon="code"
             class="text-softgray hover:text-tomato text-2xl mt-12 transition duration-500"
           />
+
           <div class="right">Kod Parçaları</div>
         </a>
       </li>
@@ -49,8 +52,8 @@
 import homebutton from "./homebutton";
 export default {
   components: {
-    homebutton
-  }
+    homebutton,
+  },
 };
 </script>
 

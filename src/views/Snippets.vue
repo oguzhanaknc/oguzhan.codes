@@ -2,7 +2,7 @@
   <div class="flex min-h-screen bg-hardbg overflow-auto">
     <NavBar />
     <pagetitle />
-    <div class="mt-40 m-auto mb-8">
+    <div class="mt-48 m-auto mb-8 md:mt-40">
       <Card />
       <Card />
       <Card />
@@ -24,8 +24,8 @@ export default {
   components: {
     Card,
     NavBar,
-    pagetitle
-  }
+    pagetitle,
+  },
 };
 </script>
 <style scoped></style>
