@@ -17,7 +17,7 @@
           quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
           nihil.
         </p>
-        <prism-editor :code="code" language="js">var l = yes</prism-editor>
+        <Prism inline language="js">var l = yes</Prism>
       </div>
       <div class="px-6 py-4">
         <span class="inline-block bg-lemon px-1 text-sm text-gray-300 mr-2"
@@ -34,10 +34,10 @@
 <script>
 //https://unixgame.io/unix50
 
-import PrismEditor from "vue-prism-editor";
+import Prism from "vue-prism-component";
 export default {
   components: {
-    PrismEditor,
+    Prism,
   },
   data: function() {
     return {

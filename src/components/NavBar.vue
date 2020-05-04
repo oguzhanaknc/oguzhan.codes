@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="hidden md:block shadow-xl fixed h-full w-16 block bg-softbg float-left z-10"
-  >
+  <div class="hidden md:block shadow-xl fixed h-full w-16 block bg-softbg float-left z-10">
     <ul>
       <li>
         <homebutton />
@@ -52,12 +50,12 @@
 import homebutton from "./homebutton";
 export default {
   components: {
-    homebutton,
-  },
+    homebutton
+  }
 };
 </script>
 
-<style lang="css">
+<style scoped lang="css">
 li {
   display: block;
 }

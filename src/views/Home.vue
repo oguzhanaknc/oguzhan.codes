@@ -7,9 +7,7 @@
         <img class="md:ml-24 xl:ml-0" src="../../public/me.jpg" />
       </div>
       <div class="md:ml-24 md:mt-24 -mt-18 text-center max-w-xl xl:text-left">
-        <div class="md:text-4xl text-3xl text-white font-bold">
-          Oğuzhan Akıncı 🔥
-        </div>
+        <div class="md:text-4xl text-3xl text-white font-bold">Oğuzhan Akıncı 🔥</div>
         <p class="md:mt-8 md:text-3xl text-contentcolor">
           Hi, I'm
           <a class="text-white">Oğuzhan Akıncı</a> and I created this project to
@@ -20,24 +18,16 @@
         <div class="mt-10">
           <button
             class="border-2 border-tomato mr-4 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
-          >
-            Github
-          </button>
+          >Github</button>
           <button
             class="border-2 border-tomato mr-4 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
-          >
-            Twitter
-          </button>
+          >Twitter</button>
           <button
             class="border-2 border-tomato mr-4 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
-          >
-            Instagram
-          </button>
+          >Instagram</button>
           <button
             class="border-2 border-tomato mr-4 text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
-          >
-            Facebook
-          </button>
+          >Facebook</button>
         </div>
       </div>
     </div>
@@ -54,8 +44,8 @@ export default {
   name: "Home",
 
   components: {
-    NavBar,
-  },
+    NavBar
+  }
 };
 </script>
 <style scoped>

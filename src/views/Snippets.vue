@@ -1,7 +1,7 @@
 <template>
   <div class="flex min-h-screen bg-hardbg overflow-auto">
     <NavBar />
-    <pagetitle />
+    <pagetitle title="Kod Parçaları ve Örnekleri" />
     <div class="mt-48 m-auto mb-8 md:mt-40">
       <Card />
       <Card />
@@ -24,8 +24,8 @@ export default {
   components: {
     Card,
     NavBar,
-    pagetitle,
-  },
+    pagetitle
+  }
 };
 </script>
 <style scoped></style>

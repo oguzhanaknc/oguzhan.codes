@@ -5,6 +5,11 @@ import store from "./store";
 import VueTailwind from "vue-tailwind";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faJs, faAirbnb } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import "prismjs";
+import "prismjs/themes/prism-tomorrow.css";
+import Prism from "vue-prism-component";
+import markdown from "./directives/markdown";
 import {
   faHouseDamage,
   faCode,
@@ -12,10 +17,7 @@ import {
   faBookOpen,
   faCoffee,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import VueCodeHighlight from "vue-code-highlight";
-import VueSimpleMarkdown from "vue-simple-markdown";
-import "vue-simple-markdown/dist/vue-simple-markdown.css";
+
 library.add(
   faHouseDamage,
   faCode,
@@ -26,17 +28,14 @@ library.add(
   faAirbnb
 );
 
-import "prismjs";
-import "prismjs/themes/prism-tomorrow.css";
-import Prism from "vue-prism-component";
 Vue.component("prism", Prism);
-Vue.use(VueSimpleMarkdown);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
-Vue.use(VueCodeHighlight);
+Vue.directive("markdown", markdown);
 Vue.use(VueTailwind);
 new Vue({
   router,
   store,
+
   render: (h) => h(App),
 }).$mount("#app");
