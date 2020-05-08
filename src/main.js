@@ -6,9 +6,7 @@ import VueTailwind from "vue-tailwind";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faJs, faAirbnb } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import "prismjs";
-import "prismjs/themes/prism-tomorrow.css";
-import Prism from "vue-prism-component";
+
 import markdown from "./directives/markdown";
 import {
   faHouseDamage,
@@ -28,7 +26,6 @@ library.add(
   faAirbnb
 );
 
-Vue.component("prism", Prism);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
 Vue.directive("markdown", markdown);

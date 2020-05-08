@@ -8,7 +8,7 @@
           :icon="['fab', 'js']"
           class="bg-wihte text-tomato text-4xl"
         />
-        <div class="ml-1">main.js</div>
+        Javascript
       </div>
       <div class="px-6 py-4">
         <div class="font-bold text-xl text-white mb-2">The Coldest Sunset</div>
@@ -17,7 +17,6 @@
           quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
           nihil.
         </p>
-        <Prism inline language="js">var l = yes</Prism>
       </div>
       <div class="px-6 py-4">
         <span class="inline-block bg-lemon px-1 text-sm text-gray-300 mr-2"
@@ -34,11 +33,7 @@
 <script>
 //https://unixgame.io/unix50
 
-import Prism from "vue-prism-component";
 export default {
-  components: {
-    Prism,
-  },
   data: function() {
     return {
       code: "var selamun = x;",
