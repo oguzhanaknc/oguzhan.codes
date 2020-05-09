@@ -1,4 +1,10 @@
 @import "tailwindcss/base";
+
+@font-face {
+  font-family: roboto;
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+
 h1 {
   @apply text-2xl;
 }
@@ -16,4 +22,8 @@ h3 {
 *::selection {
   background-color: #0c9447;
   color: #fff;
+}
+
+* {
+  font-family: roboto;
 }

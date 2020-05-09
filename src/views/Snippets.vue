@@ -3,11 +3,11 @@
     <NavBar />
     <pagetitle title="Kod Parçaları ve Örnekleri" />
     <div class="mt-48 m-auto mb-8 md:mt-40">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <Card language="Javascript" title="Javascript ile bilmem ne" :labelsprops="labels" />
+      <Card language="Python" title="Python ile bilmem ne" />
+      <Card language="Python" title="Python ile bilmem ne" />
+      <Card language="Javascript" title="Javascript ile bilmem ne" />
+      <Card title="Python ile bilmem ne" />
     </div>
   </div>
 </template>
@@ -20,7 +20,11 @@ import NavBar from "../components/NavBar";
 import pagetitle from "../components/pagetitle";
 export default {
   name: "Snippets",
-
+  data: function() {
+    return {
+      labels: ["javascript", "snippet"]
+    };
+  },
   components: {
     Card,
     NavBar,

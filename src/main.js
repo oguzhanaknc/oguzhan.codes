@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store";
 import VueTailwind from "vue-tailwind";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faJs, faAirbnb } from "@fortawesome/free-brands-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import markdown from "./directives/markdown";
@@ -16,15 +16,7 @@ import {
   faCoffee,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(
-  faHouseDamage,
-  faCode,
-  faTags,
-  faBookOpen,
-  faCoffee,
-  faJs,
-  faAirbnb
-);
+library.add(faHouseDamage, faCode, faTags, faBookOpen, faCoffee);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;

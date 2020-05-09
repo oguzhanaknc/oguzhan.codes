@@ -8,12 +8,11 @@
       </div>
       <div class="md:ml-24 md:mt-24 -mt-18 text-center max-w-xl xl:text-left">
         <div class="md:text-4xl text-3xl text-white font-bold">Oğuzhan Akıncı 🔥</div>
-        <p class="md:mt-8 md:text-3xl text-contentcolor">
-          Hi, I'm
-          <a class="text-white">Oğuzhan Akıncı</a> and I created this project to
-          help people build and ship high-quality apps. My mission is simple 👉
-          produce practical content that increases developer happiness and
-          productivity 🚀.
+        <p class="md:mt-8 md:text-3xl text-contentcolor font-light">
+          Merhaba, Ben
+          <a class="text-white">Oğuzhan Akıncı</a> bu projeyi yazılım geliştirme
+          serüvenimde öğrendiklerimi paylaşmak amacıyla geliştirdim. Hedefim
+          basit 👉 sürekli yeni şeyler öğrenip üretkenliğimi arttırmak🚀.
         </p>
         <div class="mt-10">
           <button

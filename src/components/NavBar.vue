@@ -6,7 +6,7 @@
       </li>
 
       <li>
-        <a class="tooltip" href="#">
+        <a class="tooltip" href="/posts">
           <font-awesome-icon
             icon="book-open"
             class="text-softgray hover:text-tomato text-2xl mt-12 transition duration-500"
