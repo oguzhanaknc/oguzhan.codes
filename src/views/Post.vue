@@ -1,6 +1,7 @@
 <template>
 	<div class="flex min-h-screen bg-hardbg overflow-auto">
 		<NavBar />
+
 		<pagetitle :title="slug" />
 		<div class="absolute text-xl text-left md:ml-24 ml-4 z-0 mt-32">
 			<div class="hljs" v-html="code"></div>
@@ -9,20 +10,25 @@
 </template>
 
 <script>
-import NavBar from '../components/NavBar';
-import pagetitle from '../components/pagetitle';
-import marked from 'marked';
-import hljs from 'highlight.js';
-import 'highlight.js/styles/atom-one-dark.css';
+import NavBar from "../components/NavBar";
+import pagetitle from "../components/pagetitle";
+import marked from "marked";
+import hljs from "highlight.js";
+import "highlight.js/styles/atom-one-dark.css";
+import Firebase from "firebase";
+
+/* TODO: Firebase */
+
+var db = Firebase.firestore();
 
 export default {
-	name: 'Snippet',
+	name: "Snippet",
 
 	data: function() {
 		return {
 			slug: this.$route.params.slug,
-			code:
-				'```javascript\nlet me = see.you\n```\n # selam \n   Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nemo ducimus dolorum expedita perferendis nisi officiis vel itaque vero eveniet, corporis velit accusantium in laborum nihil sed dolores. Et, tempore.  \n **garip** \n *iyice*'
+			data: "",
+			code: " Yükleniyor..."
 		};
 	},
 
@@ -45,7 +51,17 @@ export default {
 			smartypants: false,
 			xhtml: false
 		});
-		this.code = marked(this.code);
+
+		db.collection("posts")
+			.get()
+			.then(querySnapshot => {
+				querySnapshot.forEach(doc => {
+					if (doc.data().slug == this.slug) {
+						let rep = doc.data().content.replace("_n", "\n");
+						this.code = marked(rep);
+					}
+				});
+			});
 	}
 };
 </script>
