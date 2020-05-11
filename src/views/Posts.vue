@@ -6,12 +6,20 @@
 			class="mt-48 mb-8 m-auto justify-center md:mt-40 flex flex-wrap container"
 		>
 			<Card
+				content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ratione,
+			velit quos a quisquam aspernatur placeat natus laudantium, neque illum
+			molestias! Inventore officia aspernatur perspiciatis atque, harum dolor
+			delectus beatae?"
 				class="mr-8"
 				image="https://image.freepik.com/free-vector/sunset-mountains-with-pine-forest_7993-2327.jpg"
 				title="Bir Yazı Başlığı"
 				:labelsprops="labels"
 			/>
 			<Card
+				content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ratione,
+			velit quos a quisquam aspernatur placeat natus laudantium, neque illum
+			molestias! Inventore officia aspernatur perspiciatis atque, harum dolor
+			delectus beatae?"
 				class="mr-8"
 				image="https://image.freepik.com/free-vector/sunset-mountains-with-pine-forest_7993-2327.jpg"
 				title="Bir Yazı Başlığı"
@@ -31,11 +39,11 @@
 </template>
 
 <script>
-import pagetitle from '@/components/pagetitle';
-import Card from '@/components/Card';
-import NavBar from '@/components/NavBar';
+import pagetitle from "@/components/pagetitle";
+import Card from "@/components/Card";
+import NavBar from "@/components/NavBar";
 export default {
-	name: 'posts',
+	name: "posts",
 	components: {
 		Card,
 		NavBar,
@@ -43,7 +51,7 @@ export default {
 	},
 	data: function() {
 		return {
-			labels: ['label', 'labels']
+			labels: ["label", "labels"]
 		};
 	}
 };

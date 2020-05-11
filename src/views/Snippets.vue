@@ -1,8 +1,7 @@
 <template>
 	<div class="flex min-h-screen bg-hardbg overflow-auto">
-		<NavBar />
-
-		><pagetitle title="Kod Parçaları ve Örnekleri" />
+		<NavBar />>
+		<pagetitle title="Kod Parçaları ve Örnekleri" />
 		<div class="mt-48 m-auto mb-8 md:mt-40">
 			<Card
 				v-for="post in posts"
@@ -11,7 +10,6 @@
 				:title="post.title"
 				:content="post.short"
 				:slug="post.slug"
-				:labelsprops="post.label"
 			/>
 		</div>
 	</div>
@@ -23,18 +21,13 @@ import "../css/tailwind.css";
 import Card from "../components/Card";
 import NavBar from "../components/NavBar";
 import pagetitle from "../components/pagetitle";
-import Firebase from "firebase";
-
-/* TODO: Firebase */
-
-var db = Firebase.firestore();
+import * as utils from "../utils/index";
 
 export default {
 	name: "Snippets",
 
 	data: function() {
 		return {
-			labels: ["javascript", "snippet"],
 			posts: []
 		};
 	},
@@ -44,13 +37,15 @@ export default {
 		pagetitle
 	},
 	created() {
-		db.collection("posts")
+		utils.db
+			.collection("posts")
+			.where("type", "==", "Snippet")
 			.get()
 			.then(querySnapshot => {
 				querySnapshot.forEach(doc => {
-					// doc.data() is never undefined for query doc snapshots
 					this.posts.push(doc.data());
 				});
+				this.posts.reverse();
 			});
 	}
 };
