@@ -35,6 +35,11 @@ const routes = [
     name: "Admin",
     component: () => import("../views/admin.vue")
   },
+  {
+    path: "/admin/add",
+    name: "Add",
+    component: () => import("../views/Add.vue")
+  },
   { path: "/404", component: () => import("../views/Notfound.vue") },
   { path: "*", redirect: "/404" }
 ];
