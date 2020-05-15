@@ -27,3 +27,10 @@ h3 {
 * {
   font-family: roboto;
 }
+
+code {
+  background-color: #2a2e35;
+}
+.caret-tomato {
+  caret-color: red;
+}

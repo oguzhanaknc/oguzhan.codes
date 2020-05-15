@@ -8,22 +8,48 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import {
-	faHouseDamage,
-	faCode,
-	faTags,
-	faBookOpen,
-	faCoffee
+  faHouseDamage,
+  faCode,
+  faTags,
+  faBookOpen,
+  faCoffee,
+  faRedo,
+  faUndo,
+  faQuoteRight,
+  faParagraph,
+  faItalic,
+  faBold,
+  faStrikethrough,
+  faUnderline,
+  faListOl,
+  faListUl
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faHouseDamage, faCode, faTags, faBookOpen, faCoffee);
+library.add(
+  faHouseDamage,
+  faCode,
+  faTags,
+  faBookOpen,
+  faCoffee,
+  faRedo,
+  faUndo,
+  faQuoteRight,
+  faParagraph,
+  faItalic,
+  faBold,
+  faStrikethrough,
+  faUnderline,
+  faListOl,
+  faListUl
+);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 Vue.use(VueTailwind);
 new Vue({
-	router,
-	store,
+  router,
+  store,
 
-	render: h => h(App)
+  render: h => h(App)
 }).$mount("#app");
