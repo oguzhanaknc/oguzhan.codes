@@ -46,7 +46,7 @@ const routes = [
     path: "/admin",
     name: "Admin",
     meta: { allowAnonymous: false },
-    component: () => import("../views/Admin.vue")
+    component: () => import("../views/admin.vue")
   },
   {
     path: "/admin/add",
