@@ -7,9 +7,7 @@
         <img class="md:ml-24 xl:ml-0" src="../../public/me.jpg" />
       </div>
       <div class="md:ml-24 md:mt-24 -mt-18 text-center max-w-xl xl:text-left">
-        <div class="md:text-4xl text-3xl text-white font-bold">
-          Oğuzhan Akıncı 🔥
-        </div>
+        <div class="md:text-4xl text-3xl text-white font-bold">Oğuzhan Akıncı 🔥</div>
         <p class="md:mt-8 md:text-3xl text-contentcolor font-light">
           Merhaba, Ben
           <a class="text-white">Oğuzhan Akıncı</a> bu projeyi yazılım geliştirme
@@ -17,26 +15,26 @@
           basit 👉 sürekli yeni şeyler öğrenip üretkenliğimi arttırmak🚀.
         </p>
         <div class="mt-10">
-          <button
-            class="border-2 border-tomato mr-4 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
-          >
-            Github
-          </button>
-          <button
-            class="border-2 border-tomato mr-4 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
-          >
-            Twitter
-          </button>
-          <button
-            class="border-2 border-tomato mr-4 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
-          >
-            Instagram
-          </button>
-          <button
-            class="border-2 border-tomato mr-4 text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
-          >
-            Facebook
-          </button>
+          <a href="https://github.com/oguzhanaknc" target="github">
+            <button
+              class="border-2 border-tomato mr-4 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
+            >Github</button>
+          </a>
+          <a href="https://twitter.com/oguzhanaknc" target="twitter">
+            <button
+              class="border-2 border-tomato mr-4 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
+            >Twitter</button>
+          </a>
+          <a href="https://www.instagram.com/oguzhanaknc_/" target="instagram">
+            <button
+              class="border-2 border-tomato mr-4 text-lg text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
+            >Instagram</button>
+          </a>
+          <a href="https://www.facebook.com/oguzhanaknc" target="facebook">
+            <button
+              class="border-2 border-tomato mr-4 text-lg h-10 w-32 hover:bg-tomato hover:text-white mt-2"
+            >Facebook</button>
+          </a>
         </div>
       </div>
     </div>

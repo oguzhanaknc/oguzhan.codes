@@ -13,16 +13,8 @@ import {
   faTags,
   faBookOpen,
   faCoffee,
-  faRedo,
-  faUndo,
-  faQuoteRight,
-  faParagraph,
-  faItalic,
-  faBold,
-  faStrikethrough,
-  faUnderline,
-  faListOl,
-  faListUl
+  faPenAlt,
+  faSignOutAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -31,16 +23,8 @@ library.add(
   faTags,
   faBookOpen,
   faCoffee,
-  faRedo,
-  faUndo,
-  faQuoteRight,
-  faParagraph,
-  faItalic,
-  faBold,
-  faStrikethrough,
-  faUnderline,
-  faListOl,
-  faListUl
+  faPenAlt,
+  faSignOutAlt
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);

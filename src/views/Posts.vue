@@ -2,37 +2,15 @@
   <div class="flex min-h-screen bg-hardbg overflow-auto">
     <NavBar />
     <pagetitle title="En Son Blog Yazıları" />
-    <div
-      class="mt-48 mb-8 m-auto justify-center md:mt-40 flex flex-wrap container"
-    >
+    <div class="mt-48 mb-8 m-auto justify-center md:mt-40 flex flex-wrap container">
       <Card
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ratione,
-			velit quos a quisquam aspernatur placeat natus laudantium, neque illum
-			molestias! Inventore officia aspernatur perspiciatis atque, harum dolor
-			delectus beatae?"
+        v-for="post in posts"
+        :key="post.slug"
+        :content="post.short"
         class="mr-8"
-        image="https://image.freepik.com/free-vector/sunset-mountains-with-pine-forest_7993-2327.jpg"
-        title="Bir Yazı Başlığı"
-        :labelsprops="labels"
-      />
-      <Card
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ratione,
-			velit quos a quisquam aspernatur placeat natus laudantium, neque illum
-			molestias! Inventore officia aspernatur perspiciatis atque, harum dolor
-			delectus beatae?"
-        class="mr-8"
-        image="https://image.freepik.com/free-vector/sunset-mountains-with-pine-forest_7993-2327.jpg"
-        title="Bir Yazı Başlığı"
-      />
-      <Card
-        class="mr-8"
-        image="https://image.freepik.com/free-vector/sunset-mountains-with-pine-forest_7993-2327.jpg"
-        title="Bir Yazı Başlığı"
-      />
-      <Card
-        class="mr-8"
-        image="https://image.freepik.com/free-vector/sunset-mountains-with-pine-forest_7993-2327.jpg"
-        title="Bir Yazı Başlığı"
+        :image="post.image"
+        :title="post.title"
+        :slug="post.slug"
       />
     </div>
   </div>
@@ -42,6 +20,7 @@
 import pagetitle from "@/components/pagetitle";
 import Card from "@/components/Card";
 import NavBar from "@/components/NavBar";
+import * as utils from "../utils/index.js";
 export default {
   name: "posts",
   components: {
@@ -51,8 +30,20 @@ export default {
   },
   data: function() {
     return {
-      labels: ["label", "labels"]
+      posts: []
     };
+  },
+  created() {
+    utils.db
+      .collection("posts")
+      .where("type", "==", "Post")
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          this.posts.push(doc.data());
+        });
+        this.posts.reverse();
+      });
   }
 };
 </script>

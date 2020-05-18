@@ -27,6 +27,7 @@ export default {
         });
         this.posts.reverse();
       });
+    //utils.name("oguzhanaknc06@gmail.com", "Nomagic06");
   }
 };
 </script>
@@ -40,11 +41,7 @@ export default {
           class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
         >
           <option selected disabled>Gönderiler</option>
-          <option :value="post.slug" v-for="post in posts" :key="post.slug">
-            {{
-            post.title
-            }}
-          </option>
+          <option :value="post.slug" v-for="post in posts" :key="post.slug">{{ post.title }}</option>
         </select>
 
         <div class="mt-2">
@@ -62,11 +59,7 @@ export default {
           class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
         >
           <option selected disabled>Gönderiler</option>
-          <option :value="post.slug" v-for="post in posts" :key="post.slug">
-            {{
-            post.title
-            }}
-          </option>
+          <option :value="post.slug" v-for="post in posts" :key="post.slug">{{ post.title }}</option>
         </select>
 
         <div class="mt-2">

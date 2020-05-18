@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="shadow-xl flex-row md:w-20 md:h-full fixed w-full h-16 block bg-softbg bottom-0 z-10"
-  >
+  <div class="shadow-xl flex-row md:w-20 md:h-full fixed w-full h-16 block bg-softbg bottom-0 z-10">
     <ul>
       <li class="special">
         <homebutton />
@@ -44,15 +42,51 @@
           <div class="right invisible md:visible">Kahve</div>
         </a>
       </li>
+      <div v-if="user">
+        <li>
+          <a class="tooltip" href="/admin/add">
+            <font-awesome-icon
+              icon="pen-alt"
+              class="text-softgray hover:text-tomato text-2xl mt-12 transition duration-500"
+            />
+            <div class="right invisible md:visible">Yazı Ekle</div>
+          </a>
+        </li>
+        <li>
+          <a class="tooltip" @click="logout">
+            <font-awesome-icon
+              icon="sign-out-alt"
+              class="text-softgray hover:text-tomato text-2xl mt-12 transition duration-500"
+            />
+            <div class="right invisible md:visible">Çıkış Yap</div>
+          </a>
+        </li>
+      </div>
     </ul>
   </div>
 </template>
 
 <script>
 import homebutton from "./homebutton";
+import * as utils from "../utils/index.js";
 export default {
   components: {
     homebutton
+  },
+  data: function() {
+    return {
+      user: false
+    };
+  },
+  methods: {
+    logout: function() {
+      utils.logout();
+    }
+  },
+  created() {
+    utils.getUser().then(user => {
+      this.user = user;
+    });
   }
 };
 </script>

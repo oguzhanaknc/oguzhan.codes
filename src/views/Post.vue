@@ -3,7 +3,7 @@
     <NavBar />
 
     <pagetitle :title="title" />
-    <div class="absolute text-xl text-left md:ml-24 ml-4 z-0 mt-32">
+    <div class="h-full text-xl text-left md:ml-24 ml-4 z-0 mt-32">
       <div class="hljs" v-html="code"></div>
     </div>
   </div>

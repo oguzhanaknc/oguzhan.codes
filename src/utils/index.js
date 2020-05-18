@@ -3,6 +3,7 @@ import marked from "marked";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 import Firebase from "firebase";
+
 Firebase.initializeApp({
   apiKey: "AIzaSyDa95ChY-s_-MGYnRv_QsCysuWLnXF_LVk",
   authDomain: "oguzhancodes.firebaseapp.com",
@@ -45,4 +46,43 @@ export function m2j(mdata) {
 
 export function justMarkdown(data) {
   return marked(data);
+}
+
+export function login(email, password) {
+  return new Promise(function(resolve, reject) {
+    Firebase.auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(user => {
+        console.log(user.user.uid);
+
+        resolve(user.user);
+      })
+      .catch(function(error) {
+        console.log(error);
+        reject(error);
+      });
+  });
+}
+
+export function getUser() {
+  return new Promise(function(resolve) {
+    Firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        resolve(true);
+      } else {
+        console.log("üye yok");
+        resolve(false);
+      }
+    });
+  });
+}
+export function logout() {
+  Firebase.auth()
+    .signOut()
+    .then(function() {
+      window.location.reload();
+    })
+    .catch(function(error) {
+      alert(error.message);
+    });
 }

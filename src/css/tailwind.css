@@ -28,8 +28,9 @@ h3 {
   font-family: roboto;
 }
 
-code {
-  background-color: #2a2e35;
+.language-python {
+  border: 4;
+  color: white;
 }
 .caret-tomato {
   caret-color: red;
