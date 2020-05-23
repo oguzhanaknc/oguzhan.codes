@@ -4,7 +4,7 @@
 
     <pagetitle :title="title" />
     <div class="h-full text-xl text-left md:ml-24 ml-4 z-0 mt-32">
-      <div class="hljs" v-html="code"></div>
+      <div class="hljs transparent" v-html="code"></div>
     </div>
   </div>
 </template>
@@ -50,4 +50,8 @@ export default {
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+.transparent {
+  background-color: transparent !important;
+}
+</style>
