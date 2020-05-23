@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store";
 import VueTailwind from "vue-tailwind";
 import { library } from "@fortawesome/fontawesome-svg-core";
-
+import VueMeta from "vue-meta";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import {
@@ -29,7 +29,10 @@ library.add(
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
-
+Vue.use(VueMeta, {
+  // optional pluginOptions
+  refreshOnceOnNavigation: true
+});
 Vue.use(VueTailwind);
 new Vue({
   router,

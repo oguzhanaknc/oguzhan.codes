@@ -48,6 +48,21 @@ export default {
         this.posts.reverse();
       });
     document.title = "Kod Parçaları";
+  },
+  metaInfo() {
+    return {
+      title: "Snippets - Oğuzhan Akıncı",
+      meta: [
+        {
+          name: "description",
+          content:
+            "Düzenli olarak paylaştığım ufak kod örneklerini ve açıklamaları ile kendimi geliştirirken sıfırdan başlayanlara yardımcı olmaya çalışıyorum."
+        },
+        { property: "og:site_name", content: "Oğuzhan Akıncı" },
+        { property: "og:type", content: "website" },
+        { name: "robots", content: "index,follow" }
+      ]
+    };
   }
 };
 </script>

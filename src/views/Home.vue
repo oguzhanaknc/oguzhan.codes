@@ -7,7 +7,9 @@
         <img class="md:ml-24 md:mt-4 max-w-xs" src="../../public/me.jpeg" />
       </div>
       <div class="md:ml-24 md:mt-24 -mt-18 text-center max-w-xl xl:text-left">
-        <div class="md:text-4xl text-3xl text-white font-bold">Oğuzhan Akıncı 🔥</div>
+        <div class="md:text-4xl text-3xl text-white font-bold">
+          Oğuzhan Akıncı 🔥
+        </div>
         <p class="md:mt-8 md:text-3xl text-contentcolor">
           Merhaba, Ben
           <a class="text-white">Oğuzhan Akıncı</a> bu projeyi yazılım geliştirme
@@ -41,6 +43,24 @@ import NavBar from "../components/NavBar";
 
 export default {
   name: "Home",
+  metaInfo: {
+    title: "Oğuzhan Akıncı - Juinor Developer",
+
+    htmlAttrs: {
+      lang: "tr",
+      amp: true
+    },
+    meta: [
+      {
+        name: "description",
+        content:
+          "Merhaba, Ben Oğuzhan Akıncı bu projeyi yazılım geliştirme serüvenimde öğrendiklerimi paylaşmak amacıyla geliştirdim. Hedefim basit 👉 sürekli yeni şeyler öğrenip üretkenliğimi arttırmak🚀."
+      },
+      { property: "og:site_name", content: "Oğuzhan Akıncı" },
+      { property: "og:type", content: "website" },
+      { name: "robots", content: "index,follow" }
+    ]
+  },
   created() {
     console.log(process.env.apiKey, 66);
     document.title = "Oğuzhan Akıncı";

@@ -17,12 +17,13 @@ import * as utils from "../utils/index";
 export default {
   name: "Snippet",
 
-  data: function() {
+  data() {
     return {
       slug: this.$route.params.slug,
       data: "",
       code: " Yükleniyor...",
-      title: ""
+      title: "",
+      short: ""
     };
   },
 
@@ -30,7 +31,7 @@ export default {
     NavBar,
     pagetitle
   },
-  mounted() {
+  created() {
     utils.db
       .collection("posts")
       .where("slug", "==", this.slug)
@@ -43,9 +44,23 @@ export default {
         querySnapshot.forEach(doc => {
           this.code = utils.j2m(doc.data().content);
           this.title = doc.data().title;
-          document.title = this.title;
+          this.short = doc.data().short;
         });
       });
+  },
+  metaInfo() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          name: "description",
+          content: this.short
+        },
+        { property: "og:site_name", content: "Oğuzhan Akıncı" },
+        { property: "og:type", content: "website" },
+        { name: "robots", content: "index,follow" }
+      ]
+    };
   }
 };
 </script>
