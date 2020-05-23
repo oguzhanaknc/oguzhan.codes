@@ -1,4 +1,16 @@
 @import "tailwindcss/base";
+ {
+  --tomato: "#ff6347";
+  --hardbg: "#12181b";
+  --softbg: "#2a2e35";
+  --white: "#fff";
+  --softgray: "#6c7983";
+  --tomato: "#ff6347";
+  --contentcolor: "#b2becd";
+  --lemon: "#f0db4f";
+  --indigo: "#54c5f8";
+  --teal: "#2B6CB0";
+}
 
 @font-face {
   font-family: roboto;
@@ -25,13 +37,49 @@ h3 {
 }
 
 * {
-  font-family: roboto;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-.language-python {
-  border: 4;
-  color: white;
-}
 .caret-tomato {
   caret-color: red;
+}
+
+.button--tomato {
+  border-width: 2px;
+  border-color: tomato;
+  margin-right: 1rem;
+  font-size: 1.125rem;
+  width: 8rem;
+  color: tomato;
+  height: 2.5rem;
+}
+.button--tomato:hover {
+  color: white;
+  background-color: tomato;
+  transition: all 1s;
+}
+.button--blue {
+  border-width: 2px;
+  border-color: #54c5f8;
+  margin-right: 1rem;
+  font-size: 1.125rem;
+  width: 8rem;
+  color: #54c5f8;
+  height: 2.5rem;
+}
+.button--blue:hover {
+  color: white;
+  background-color: #54c5f8;
+  transition: all 1s;
+}
+
+.icon {
+  color: #6c7983;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+.icon:hover {
+  color: tomato;
+  transition: all 0.5s;
 }

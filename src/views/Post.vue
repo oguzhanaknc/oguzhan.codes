@@ -43,6 +43,7 @@ export default {
         querySnapshot.forEach(doc => {
           this.code = utils.j2m(doc.data().content);
           this.title = doc.data().title;
+          document.title = this.title;
         });
       });
   }

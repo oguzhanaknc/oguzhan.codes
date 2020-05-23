@@ -6,11 +6,7 @@
   >
     <div v-if="!isover">
       <a href="/">
-        <img
-          class="md:w-full w-16 md:h-16"
-          v-bind:src="require('../../public/' + img)"
-          alt="yok"
-        />
+        <img class="md:w-full w-16 md:h-16" v-bind:src="require('../../public/' + img)" alt="yok" />
       </a>
     </div>
     <div class="text-3xl" v-if="isover">
@@ -25,7 +21,7 @@
 export default {
   name: "homebutton",
   data: function() {
-    return { img: "200.gif", isover: true };
+    return { img: "giphy2.gif", isover: true };
   },
   methods: {
     mouseover: function() {

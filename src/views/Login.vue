@@ -24,6 +24,9 @@ export default {
     logout: function() {
       utils.logout();
     }
+  },
+  created() {
+    document.title = "Yönetici Girişi";
   }
 };
 </script>
@@ -38,14 +41,8 @@ export default {
       <input v-model="pass" class="mt-4 ml-1" id="password" type="password" />
       <br />
       <div class="mt-2">
-        <button
-          @click="login"
-          class="text-tomato border-2 border-tomato hover:bg-tomato hover:text-white p-1"
-        >Giriş Yap</button>
-        <button
-          @click="logout"
-          class="text-indigo border-2 border-indigo hover:bg-indigo hover:text-white ml-4 p-1"
-        >Geri Dön</button>
+        <button @click="login" class="button--tomato">Giriş Yap</button>
+        <button @click="logout" class="button--blue">Geri Dön</button>
       </div>
     </div>
   </div>

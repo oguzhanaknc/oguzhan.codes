@@ -47,6 +47,7 @@ export default {
         });
         this.posts.reverse();
       });
+    document.title = "Kod Parçaları";
   }
 };
 </script>

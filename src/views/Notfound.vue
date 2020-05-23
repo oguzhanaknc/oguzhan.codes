@@ -22,6 +22,9 @@ export default {
   },
   components: {
     NavBar
+  },
+  created() {
+    document.title = "404 Not Found";
   }
 };
 </script>

@@ -44,6 +44,7 @@ export default {
         });
         this.posts.reverse();
       });
+    document.title = "blog yazıları";
   }
 };
 </script>

@@ -6,58 +6,40 @@
       </li>
       <li>
         <a class="tooltip" href="/snippets">
-          <font-awesome-icon
-            icon="code"
-            class="text-softgray hover:text-tomato text-2xl mt-12 transition duration-500"
-          />
+          <font-awesome-icon icon="code" class="icon" />
 
           <div class="right invisible md:visible">Kod Parçaları</div>
         </a>
       </li>
       <li>
         <a class="tooltip" href="/posts">
-          <font-awesome-icon
-            icon="book-open"
-            class="text-softgray hover:text-tomato text-2xl mt-12 transition duration-500"
-          />
+          <font-awesome-icon icon="book-open" class="icon" />
           <div class="invisible md:visible right">Blog</div>
         </a>
       </li>
 
       <li>
         <a class="tooltip" href="#">
-          <font-awesome-icon
-            icon="tags"
-            class="text-softgray hover:text-tomato text-2xl mt-12 transition duration-500"
-          />
+          <font-awesome-icon icon="tags" class="icon" />
           <div class="right invisible md:visible">Etiketler</div>
         </a>
       </li>
       <li>
         <a class="tooltip" href="#">
-          <font-awesome-icon
-            icon="coffee"
-            class="text-softgray hover:text-tomato text-2xl mt-12 transition duration-500"
-          />
+          <font-awesome-icon icon="coffee" class="icon" />
           <div class="right invisible md:visible">Kahve</div>
         </a>
       </li>
       <div v-if="user">
         <li>
           <a class="tooltip" href="/admin/add">
-            <font-awesome-icon
-              icon="pen-alt"
-              class="text-softgray hover:text-tomato text-2xl mt-12 transition duration-500"
-            />
+            <font-awesome-icon icon="pen-alt" class="icon" />
             <div class="right invisible md:visible">Yazı Ekle</div>
           </a>
         </li>
         <li>
           <a class="tooltip" @click="logout">
-            <font-awesome-icon
-              icon="sign-out-alt"
-              class="text-softgray hover:text-tomato text-2xl mt-12 transition duration-500"
-            />
+            <font-awesome-icon icon="sign-out-alt" class="icon" />
             <div class="right invisible md:visible">Çıkış Yap</div>
           </a>
         </li>
