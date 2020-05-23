@@ -83,3 +83,15 @@ h3 {
   color: tomato;
   transition: all 0.5s;
 }
+code {
+  background-color: #22262f;
+  display: block;
+  padding-left: 20px;
+}
+code:hover {
+  background-color: #2a2e35;
+}
+
+.cardh {
+  max-height: 520px;
+}
