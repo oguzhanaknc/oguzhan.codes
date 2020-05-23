@@ -5,12 +5,13 @@ import "highlight.js/styles/atom-one-dark.css";
 import Firebase from "firebase";
 
 Firebase.initializeApp({
-  apiKey: "AIzaSyDa95ChY-s_-MGYnRv_QsCysuWLnXF_LVk",
-  authDomain: "oguzhancodes.firebaseapp.com",
-  projectId: "oguzhancodes",
-  storageBucket: "oguzhancodes.appspot.com"
+  apiKey: process.env.VUE_APP_APIKEY,
+  authDomain: process.env.VUE_APP_AUTHDOMAIN,
+  projectId: process.env.VUE_APP_PROJECTID,
+  storageBucket: process.env.VUE_APP_STOREAGEBUTCKET
 });
 export const db = Firebase.firestore();
+console.log(process.env.VUE_APP_APIKEY);
 
 marked.setOptions({
   renderer: new marked.Renderer(),

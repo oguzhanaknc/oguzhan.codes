@@ -63,7 +63,8 @@ export default {
   methods: {
     logout: function() {
       utils.logout();
-    }
+    },
+    isSelected: function() {}
   },
   created() {
     utils.getUser().then(user => {
