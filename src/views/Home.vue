@@ -61,10 +61,7 @@ export default {
       { name: "robots", content: "index,follow" }
     ]
   },
-  created() {
-    console.log(process.env.apiKey, 66);
-    document.title = "Oğuzhan Akıncı";
-  },
+
   components: {
     NavBar
   }

@@ -11,7 +11,6 @@ Firebase.initializeApp({
   storageBucket: process.env.VUE_APP_STOREAGEBUTCKET
 });
 export const db = Firebase.firestore();
-console.log(process.env.VUE_APP_APIKEY);
 
 marked.setOptions({
   renderer: new marked.Renderer(),
@@ -86,4 +85,16 @@ export function logout() {
     .catch(function(error) {
       alert(error.message);
     });
+}
+export function getSlugs() {
+  let posts = [];
+  Firebase.firestore()
+    .collection("Posts")
+    .get()
+    .then(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        posts.push(doc.data());
+      });
+    });
+  return posts;
 }

@@ -4,7 +4,7 @@ import Home from "../views/Home.vue";
 import * as utils from "../utils/index.js";
 Vue.use(VueRouter);
 
-const routes = [
+export const routes = [
   {
     path: "/",
     name: "Home",
